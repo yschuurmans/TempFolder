@@ -18,7 +18,7 @@ namespace TempFolder
         {
             DateTime date = DateTime.Now;
             var existed = CreateFolder(date);
-            Process.Start(GetPath(date));
+            Process.Start("explorer.exe", GetPath(date));
 
             if (!existed)
                 RemoveOldFolders(DateTime.Now);
